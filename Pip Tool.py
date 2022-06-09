@@ -1,14 +1,14 @@
 import os
 
 def install_module():
-    instruction = "pip install " + input("What module would you like to install?")
-    os.system(instruction)
-    print("Congratulations, your module has been successfully installed!")
+    instruction = input("What module would you like to install?")
+    os.system("pip install {0}".format(instruction))
+    print("Action Completed...")
 
 def uninstall_module():
-    instruction = "pip uninstall " + input("What module would you like to uninstall?")
-    os.system(instruction)
-    print("Congratulations, your module has been successfully uninstalled!")
+    instruction = input("What module would you like to uninstall?")
+    os.system("pip uninstall {0}".format(instruction))
+    print("Action Completed...")
 
 def check_version():
     print(os.system("pip --version"))
@@ -35,4 +35,3 @@ while status == True:
     if continue_program.lower() == "n":
         status = False
         print("Program ended.\nThank you for using the Pip Tool.")
-
